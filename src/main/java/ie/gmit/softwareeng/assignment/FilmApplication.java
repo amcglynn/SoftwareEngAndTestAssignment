@@ -10,11 +10,14 @@ public class FilmApplication {
     private Scanner scanner;
     private FilmService service;
     private FilmRepository filmRepository;
+    private OmdbClient omdbClient;
 
     public FilmApplication() {
         scanner = new Scanner(System.in);
         filmRepository = new InMemoryFilmRepository();
-        service = new FilmService(filmRepository);
+        omdbClient = new OmdbClient("ebe6095f");
+
+        service = new FilmService(filmRepository, omdbClient);
 
         while (true) {
             System.out.println("Would you like to do?");
@@ -42,6 +45,7 @@ public class FilmApplication {
     }
 
     public void displayCatalog() {
+        System.out.println("Loading...");
         System.out.println("Film Catalog: " + service.getFilmCatalog());
     }
 

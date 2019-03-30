@@ -5,16 +5,18 @@ import java.util.Collection;
 public class FilmService {
 
     private final FilmRepository repository;
+    private final OmdbClient omdbClient;
 
     /***
      * Constructor for the FilmService.
      * @param repository FilmRepository, must not be null
      */
-    public FilmService(FilmRepository repository) {
-        if (repository == null) {
+    public FilmService(FilmRepository repository, OmdbClient omdbClient) {
+        if (repository == null || omdbClient == null) {
             throw new IllegalArgumentException("Repository cannot be null");
         }
         this.repository = repository;
+        this.omdbClient = omdbClient;
     }
 
     /***
@@ -43,9 +45,13 @@ public class FilmService {
 
         stringBuilder.append("\n-----------------------------------------------");
         for (Film film: films) {
+            OmdbFilmDetails filmDetails = omdbClient.getFilmDetails(film.getTitle());
+
             stringBuilder.append("\nFilm\nID: " + film.getId() + "\nName: " + film.getTitle() +
                     "\nCopies in stock: " + film.getCopiesInStock() +
-                    "\nRating: " + getAverageRating(film) + "\nBased on " + film.getNumReviews() + " reviews");
+                    "\nRating: " + getAverageRating(film) + "\nBased on " + film.getNumReviews() + " reviews" +
+                    "\nIMDB rating: " + filmDetails.getImdbRating() +
+                    "\nMetacritic rating: " + filmDetails.getMetascore());
             stringBuilder.append("\n-----------------------------------------------");
         }
 

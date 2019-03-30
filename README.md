@@ -10,12 +10,15 @@ This project contains code for a video rental application. It contains the vario
 * FilmApplication: application used for demonstration only
 * FilmNotFoundException: Exception which should be thrown when a film is not found in the repository
 * NotInStockException: Exception that should be thrown when a film is not in stock
+* OmdbClient: A web client that makes a request to omdbapi.com to get metacritic and imdb ratings for a movie
+* OmdbFilmDetails: A class that contains the metacritic and imdb ratings from omdbapi.com
 
 ## Requirements
 * Your task is to build out unit tests for FilmService.java.
 * Unit tests must use the JUnit framework V4.12.
 * FilmService contains dependencies object(s). To make the tests reliable, you must use test mocks to mock out behaviour on the dependencies. 
 * Mockito V2.23.4 must be used as the mocking framework to mock dependencies.
+* Tests must pass regardless if there is a network connection or not.
 * A comprehensive test suite for the FilmService class must be developed. This must ensure all code paths are tested.
 
 ## Submission
