@@ -17,6 +17,8 @@ This project contains code for a video rental application. It contains the vario
 * FilmService contains dependencies object(s). To make the tests reliable, you must use test mocks to mock out behaviour on the dependencies. 
 * Mockito V2.23.4 must be used as the mocking framework to mock dependencies.
 * A comprehensive test suite for the FilmService class must be developed. This must ensure all code paths are tested.
+* No changes must be made to the code in the src/main/java directory
+* The tests must run when running the command 'mvn test'
 
 ## Submission
 * Assignment must be committed and pushed to a fork on Github.
