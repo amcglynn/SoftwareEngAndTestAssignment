@@ -90,7 +90,6 @@ public class Tests {
         when(repository.getFilms()).thenReturn(entrySet.values());
 
         when(omdbClient.getFilmDetails("Eds film")).thenReturn(filmDetails);
-
         when(filmDetails.getImdbRating()).thenReturn("10/10");
         when(filmDetails.getMetascore()).thenReturn("99");
 
