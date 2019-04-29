@@ -1,0 +1,9 @@
+ie\gmit\softwareeng\assignment\FilmRepository.class
+ie\gmit\softwareeng\assignment\FilmNotFoundException.class
+ie\gmit\softwareeng\assignment\NotInStockException.class
+ie\gmit\softwareeng\assignment\FilmApplication.class
+ie\gmit\softwareeng\assignment\OmdbFilmDetails.class
+ie\gmit\softwareeng\assignment\Film.class
+ie\gmit\softwareeng\assignment\FilmService.class
+ie\gmit\softwareeng\assignment\InMemoryFilmRepository.class
+ie\gmit\softwareeng\assignment\OmdbClient.class
