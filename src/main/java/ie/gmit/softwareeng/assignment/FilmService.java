@@ -67,7 +67,7 @@ public class FilmService {
         Film film = repository.getFilm(filmId);
 
         if (film == null) {
-            throw new FilmNotFoundException(filmId);
+                throw new FilmNotFoundException(filmId);
         }
 
         return film;
