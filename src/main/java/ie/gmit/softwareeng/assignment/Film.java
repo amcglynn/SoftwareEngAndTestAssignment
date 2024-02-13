@@ -1,5 +1,6 @@
 package ie.gmit.softwareeng.assignment;
 
+
 /***
  * Class that contains information about a film
  */
